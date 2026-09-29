@@ -1,4 +1,5 @@
 <script setup>
+import SeoHead from '../../Components/SeoHead.vue';
 defineProps({
     featuredBooks: {
         type: Array,
@@ -12,6 +13,7 @@ defineProps({
 </script>
 
 <template>
+    <SeoHead title="Home" />
     <div class="min-h-screen bg-[#f7f5f0] text-[#182b2a]">
         <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-7 lg:px-10">
             <a href="/" class="font-serif text-2xl font-semibold tracking-tight">লেখকের খাতা<span class="text-[#c56b4d]">.</span></a>
@@ -26,7 +28,7 @@ defineProps({
         </header>
 
         <main>
-            <section class="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-10 lg:pt-20">
+            <section class="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-14 animate-fade-up lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-10 lg:pt-20">
                 <div>
                     <p class="mb-7 text-xs font-bold uppercase tracking-[0.28em] text-[#c56b4d]">শব্দের ভেতর দিয়ে</p>
                     <h1 class="max-w-2xl font-serif text-5xl leading-[1.06] tracking-tight text-[#182b2a] sm:text-6xl lg:text-7xl">গল্পেরা থাকে,<br /><span class="text-[#c56b4d]">শুধু বলা বাকি।</span></h1>
