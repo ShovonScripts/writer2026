@@ -1,0 +1,5 @@
+<script setup>
+import { Link } from '@inertiajs/vue3';
+defineProps({ book: Object });
+</script>
+<template><main class="min-h-screen bg-[#f7f5f0] px-6 py-16 text-[#182b2a] lg:px-10"><div class="mx-auto max-w-5xl"><Link href="/books" class="text-sm text-[#c56b4d]">← সব বই</Link><div class="mt-16 grid gap-12 md:grid-cols-[.7fr_1.3fr] md:items-start"><div class="flex aspect-[3/4] items-center justify-center rounded-2xl bg-[#d5ded5] p-10 text-center font-serif text-4xl text-[#1d4843]">{{ book.title_bn }}</div><div><p class="text-xs font-bold uppercase tracking-[.2em] text-[#c56b4d]">{{ book.published_year }}</p><h1 class="mt-4 font-serif text-5xl">{{ book.title_bn }}</h1><p class="mt-2 text-lg text-[#718079]">{{ book.title_en }}</p><p class="mt-8 whitespace-pre-line leading-8 text-[#60716c]">{{ book.description_bn }}</p><div class="mt-10 flex flex-wrap gap-3"><a v-for="link in book.links" :key="link.id" :href="link.url" target="_blank" rel="noopener" class="rounded-full bg-[#1d4843] px-6 py-3 text-sm font-semibold text-white">{{ link.platform_name }} থেকে কিনুন ↗</a></div></div></div></div></main></template>
